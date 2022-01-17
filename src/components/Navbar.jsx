@@ -18,4 +18,3 @@ export const Navbar = ({ darkTheme, setDarkTheme}) => {
         </div>
     )
 }
-
