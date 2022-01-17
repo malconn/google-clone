@@ -1,20 +1,21 @@
 import React from 'react'
 
-import {Switch, Redirect, Route } from 'react-router-dom'
-import  Results  from './Results'
+import {BrowserRouter, Route, Navigate, Routes } from 'react-router-dom'
+import Results from './Results'
 
-export const Routes = () => {
-    return (
-        <div className="p-4">
-            <Switch>
-                <Route exact path="/">
-                    <Redirect to="/search"/>
-                </Route>
-                <Route exact path={["/search","/news","/images","/videos"]}>
-                    <Results />
-                </Route>
-            </Switch>
-        </div>
-    )
+export const Routers = () => {
+  return (
+    <div className="p-4">
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/">
+            <Navigate to="/search" />
+          </Route>
+          <Route exact path={['/search', '/news', '/images', '/videos']}>
+            <Results />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  )
 }
-
