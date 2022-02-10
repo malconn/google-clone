@@ -9,7 +9,7 @@ export default function Results() {
     const location = useLocation();
 
     useEffect(()=>{
-        getResults('/search/q=Javascript&num=40')
+        getResults('/google-search?gl=us&q=Javascript&num=40&hl=en')
     },[]);
     
     if(isLoading) return <Loading />
