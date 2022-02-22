@@ -26,7 +26,7 @@ export const ResultContextProvider = ({ children }) => {
     setIsLoading(false);
   }
   return(
-    <ResultContext.Provider value={{ getResults,results,searchTerm,setSearchTerm,isLoading}}>
+    <ResultContext.Provider value={{ getResults,results,searchTerm,setSearchTerm,isLoading }}>
       {children}
     </ResultContext.Provider>
   )
