@@ -21,7 +21,8 @@ export const ResultContextProvider = ({ children }) => {
     })
 
     const data = await response.json();
-    console.log(data);
+    const link = data?.organic?.sitelinks;
+    console.log(data,data?.organic[0]?.sitelinks[0]?.href);
     setResults(data);
     setIsLoading(false);
   }
